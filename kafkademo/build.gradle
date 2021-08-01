@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ricardo.kafka'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '2.8.0'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.4'
+}
+
+test {
+    useJUnitPlatform()
+}
